@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Jadhav Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#0b1320;
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1320;
+    border-bottom:1px solid #ffffff1a;
+    z-index:1000;
+    flex-wrap:wrap;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.logo-circle img{
+    width:85%;
+}
+
+.logo-text h2{
+    font-size:16px;
+}
+
+.logo-text p{
+    font-size:10px;
+    color:#ccc;
+}
+
+/* NAVIGATION */
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff7b00;
+}
+
+/* ABOUT SECTION */
+.about{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 8% 40px;
+    background:
+    linear-gradient(#000c,#000c),
+    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover;
+    background-size:cover;
+}
+
+.about-content{
+    max-width:800px;
+}
+
+.about h1{
+    font-size:60px;
+    line-height:1.1;
+}
+
+.about span{
+    color:#ff7b00;
+}
+
+.about p{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:#ff7b00;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff5e00;
+}
+
+/* FLOATING BUTTONS */
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.floating a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
+}
+
+/* COLORS */
+.phone{background:#ff7b00;}
+.email{background:#1e90ff;}
+.whatsapp{background:#25d366;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+nav{
+    justify-content:center;
+    gap:15px;
+}
+
+.about{
+    text-align:center;
+    justify-content:center;
+    padding-top:160px;
+}
+
+.about h1{
+    font-size:38px;
+}
+}
+
+@media(max-width:480px){
+nav a{
+    font-size:14px;
+}
+
+.about h1{
+    font-size:30px;
+}
+
+/* ✅ FIXED: SAME SIZE AS HOME PAGE */
+.floating a{
+    width:48px;
+    height:48px;
+    font-size:18px;
+}
+}
+
+</style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<header>
+
+<div class="logo">
+    <div class="logo-circle">
+        <img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png" alt="Logo">
+    </div>
+
+    <div class="logo-text">
+        <h2>JADHAV ENGINEERING</h2>
+        <p>Mechanical Design Solutions</p>
+    </div>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="about">
+
+<div class="about-content">
+
+<h1>About <span>Us</span></h1>
+
+<p>
+We are a mechanical engineering design company focused on delivering accurate, practical, and efficient engineering solutions for industrial applications.
+<br><br>
+We specialize in 2D Drafting, 3D Modeling, Fabrication Drawings, and Reverse Engineering for manufacturing and production support.
+<br><br>
+Our goal is to improve industrial workflows through precise design and reliable engineering support.
+</p>
+
+<a href="index.html" class="btn">Back to Home</a>
+
+</div>
+
+</section>
+
+<div class="floating">
+
+<a href="tel:+918976186381" class="phone">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="mailto:jadhavengineeringg@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/918976186381" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</body>
+</html>

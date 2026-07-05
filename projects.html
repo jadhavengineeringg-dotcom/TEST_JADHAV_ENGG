@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Jadhav Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#0b1320;
+    color:#fff;
+}
+
+/* 🔒 DISABLE TEXT + IMAGE SELECTION */
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* HIDE SCROLLBAR */
+html, body{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+    display:none;
+}
+
+/* 🔒 IMAGE PROTECTION (NO VISUAL SEARCH / NO DRAG) */
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1320;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+    flex-wrap:wrap;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.logo-circle img{
+    width:85%;
+}
+
+.logo-text h2{ font-size:16px; }
+.logo-text p{ font-size:10px; color:#ccc; }
+
+/* NAV */
+nav{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff7b00;
+}
+
+/* HERO */
+.hero{
+    min-height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 8% 40px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover no-repeat;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero span{
+    color:#ff7b00;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#ddd;
+}
+
+/* PROJECT GRID */
+.projects{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.project-card{
+    background:#0b1320;
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 0 10px rgba(255,255,255,0.04);
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(255,255,255,0.2);
+    box-shadow:0 0 16px rgba(255,255,255,0.06);
+}
+
+/* IMAGE */
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    padding:10px;
+    background:#0b1320;
+    filter: brightness(1.6) contrast(1.25) saturate(1.4);
+}
+
+/* TEXT */
+.project-card h3{
+    padding:12px 15px 0;
+    font-size:16px;
+    color:#ff7b00;
+}
+
+.project-card p{
+    padding:8px 15px 15px;
+    font-size:13px;
+    color:#ccc;
+}
+
+/* FLOATING BUTTONS */
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
+}
+
+.floating a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.floating a:hover{
+    transform:scale(1.1);
+}
+
+.phone{background:#ff7b00;}
+.email{background:#1e90ff;}
+.whatsapp{background:#25d366;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:10px;
+}
+
+nav{
+    justify-content:center;
+    gap:15px;
+}
+
+.hero{
+    padding-top:160px;
+}
+
+.hero h1{font-size:38px;}
+.hero p{font-size:15px;}
+
+.floating a{
+    width:48px;
+    height:48px;
+    font-size:18px;
+}
+}
+
+@media(max-width:480px){
+.hero h1{font-size:30px;}
+nav a{font-size:14px;}
+.project-card img{height:200px;}
+}
+
+</style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<header>
+<div class="logo">
+    <div class="logo-circle">
+        <img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png">
+    </div>
+    <div class="logo-text">
+        <h2>JADHAV ENGINEERING</h2>
+        <p>Mechanical Design Solutions</p>
+    </div>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+    <h1>Our <span>Projects</span></h1>
+    <p>Explore our portfolio of completed engineering design, drafting, and fabrication work.</p>
+</div>
+</section>
+
+<section class="projects">
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/f/xqxxZwkw2Tp.png">
+<h3>GA Drawing</h3>
+<p>300kg Smoke Tube Type Steam Boiler (Wood Fired)</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/files/c/8821535720.png">
+<h3>GA Drawing</h3>
+<p>Heat Exchanger.</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/files/c/7727264720.png">
+<h3>GA Drawing</h3>
+<p>DETAILS FOR CHLORINE EXPANSION TANK.</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/f/bKP7EXUcg1P.png">
+<h3>Office Layout Plan (2D CAD)</h3>
+<p>2D CAD Office Layout With Furniture Arrangement And Workspace Planning.</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/f/r0wKjoJbovg.png">
+<h3>Fabrication & Assembly Drawing</h3>
+<p>Pulley Fabrication And Assembly Drawing.</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/f/J8mMixtIZZT.png">
+<h3>Steam Boiler Coil Fabrication Drawing</h3>
+<p>Fabrication Drawing of 200Kg Steam Boiler Coil.</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/f/2Nnby30OrZj.png">
+<h3>Detail Drawing</h3>
+<p>2D Drawing OF Three-Lug Flange.</p>
+</div>
+
+<div class="project-card">
+<img src="https://cdn.corenexis.com/f/1fE5w6ksLeF.png">
+<h3>Office Layout Plan (2D CAD)</h3>
+<p>2D Office Layout With Workstation Planning, Furniture Arrangement, and Space Optimization.</p>
+</div>
+
+</section>
+
+<div class="floating">
+
+<a href="tel:+918976186381" class="phone">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="mailto:jadhavengineeringg@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/918976186381" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("dragstart", e => e.preventDefault());
+</script>
+
+</body>
+</html>

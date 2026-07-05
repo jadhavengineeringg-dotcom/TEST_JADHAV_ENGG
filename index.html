@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="GXKdSGHxwtz96Iz9Xx88D2-5IduKGr2LGRbJQ4zt9t4" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadhav Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    background:#0b1320;
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1320;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+    flex-wrap:wrap;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.logo-circle img{
+    width:85%;
+}
+
+.logo-text h2{
+    font-size:16px;
+}
+
+.logo-text p{
+    font-size:10px;
+    color:#ccc;
+}
+
+/* NAVIGATION RIBBON */
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff7b00;
+}
+
+/* HERO SECTION */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:100px 8% 40px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+}
+
+.hero span{
+    color:#ff7b00;
+}
+
+.hero p{
+    margin:20px 0;
+    color:#ddd;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#ff7b00;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff5e00;
+}
+
+/* FLOATING BUTTONS */
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
+}
+
+.floating a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.floating a:hover{
+    transform:scale(1.1);
+}
+
+.phone{background:#ff7b00;}
+.email{background:#1e90ff;}
+.whatsapp{background:#25d366;}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1024px){
+.hero h1{
+    font-size:48px;
+}
+.hero p{
+    font-size:16px;
+}
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+nav{
+    justify-content:center;
+    gap:15px;
+}
+
+.hero{
+    text-align:center;
+    justify-content:center;
+    padding-top:160px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:16px;
+}
+}
+
+@media(max-width:480px){
+
+nav a{
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.btn{
+    padding:12px 25px;
+    font-size:14px;
+}
+
+.floating a{
+    width:48px;
+    height:48px;
+    font-size:18px;
+}
+}
+
+</style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<header>
+
+<div class="logo">
+    <div class="logo-circle">
+        <img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png" alt="Logo">
+    </div>
+
+    <div class="logo-text">
+        <h2>JADHAV ENGINEERING</h2>
+        <p>Mechanical Design Solutions</p>
+    </div>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+    <h1>Mechanical <span>Design & Engineering</span> Services</h1>
+
+    <p>
+        2D Drafting • 3D Modeling • Fabrication Drawings • Reverse Engineering
+    </p>
+
+    <a href="tel:+918976186381" class="btn">Contact Now</a>
+</div>
+
+</section>
+
+<div class="floating">
+
+<a href="tel:+918976186381" class="phone">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="mailto:jadhavengineeringg@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/918976186381" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</body>
+</html>

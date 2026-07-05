@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services - Jadhav Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html, body{
+width:100%;
+overflow-x:hidden;
+background:#0b1320;
+color:white;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b1320;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* LOGO */
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-circle{
+width:60px;
+height:60px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.logo-circle img{
+width:85%;
+height:auto;
+}
+
+.logo-text h2{
+font-size:16px;
+}
+
+.logo-text p{
+font-size:10px;
+color:#ccc;
+}
+
+/* NAV */
+nav{
+display:flex;
+align-items:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff7b00;
+}
+
+/* TITLE */
+.hero-title{
+padding:120px 8% 40px;
+text-align:center;
+}
+
+.hero-title h1{
+font-size:48px;
+}
+
+.hero-title span{
+color:#ff7b00;
+}
+
+/* SERVICES GRID */
+.services{
+padding:40px 8% 80px;
+display:grid;
+grid-template-columns:repeat(4, 1fr);
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+padding:30px;
+border-radius:16px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#ff7b00;
+background:rgba(255,123,0,0.05);
+}
+
+.card i{
+font-size:40px;
+color:#ff7b00;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:18px;
+}
+
+.card p{
+color:#cfcfcf;
+font-size:14px;
+line-height:1.6;
+}
+
+/* FLOAT BUTTONS */
+.float-buttons{
+position:fixed;
+right:20px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:9999;
+}
+
+.float-buttons a{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.float-buttons a:hover{
+transform:scale(1.1);
+}
+
+.phone{background:#ff7b00;}
+.email{background:#007bff;}
+.whatsapp{background:#25d366;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.services{
+grid-template-columns:repeat(2, 1fr);
+}
+}
+
+/* FIXED MOBILE HEADER (LIKE HOME PAGE) */
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding:12px 8%;
+}
+
+nav{
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-title{
+    padding-top:160px;
+}
+
+.hero-title h1{
+    font-size:36px;
+}
+
+.services{
+    grid-template-columns:1fr;
+}
+}
+
+@media(max-width:480px){
+
+nav a{
+font-size:14px;
+}
+
+.card{
+padding:20px;
+}
+
+.card i{
+font-size:34px;
+}
+
+.hero-title h1{
+font-size:30px;
+}
+
+.float-buttons a{
+width:48px;
+height:48px;
+font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<!-- ONLY CHANGE: RIGHT CLICK OFF -->
+<body oncontextmenu="return false;">
+
+<header>
+
+<div class="logo">
+<div class="logo-circle">
+<img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png" alt="Logo">
+</div>
+
+<div class="logo-text">
+<h2>JADHAV ENGINEERING</h2>
+<p>Mechanical Design Solutions</p>
+</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<div class="hero-title">
+<h1>Our <span>Expertise</span></h1>
+</div>
+
+<section class="services">
+
+<div class="card">
+<i class="fas fa-drafting-compass"></i>
+<h3>2D Drafting</h3>
+<p>Accurate technical drawings for manufacturing and fabrication work.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-cube"></i>
+<h3>3D Modeling</h3>
+<p>Detailed 3D models for parts, assemblies, and visualization.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-industry"></i>
+<h3>Fabrication Drawings</h3>
+<p>Shop-ready drawings for smooth production and assembly process.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-gears"></i>
+<h3>Mechanical Design</h3>
+<p>Complete machine and equipment design solutions.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-sync-alt"></i>
+<h3>Reverse Engineering</h3>
+<p>Convert physical components into accurate digital models.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-list-check"></i>
+<h3>BOM Preparation</h3>
+<p>Material list preparation and cost estimation.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-screwdriver-wrench"></i>
+<h3>Fixture Design</h3>
+<p>We design trolleys and fixtures for efficient material handling in manufacturing.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-drafting-compass"></i>
+<h3>Layout Planning</h3>
+<p>We create optimized house, civil, and office layout designs.</p>
+</div>
+
+</section>
+
+<div class="float-buttons">
+
+<a href="tel:+918976186381" class="phone">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="mailto:jadhavengineeringg@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/918976186381" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</body>
+</html>

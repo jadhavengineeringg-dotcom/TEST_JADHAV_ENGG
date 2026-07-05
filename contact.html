@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Jadhav Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+    background:#0b1320;
+    color:#fff;
+    scroll-behavior:smooth;
+
+    /* Hide scrollbar but keep scrolling */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1320;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.logo-circle img{
+    width:85%;
+}
+
+.logo-text h2{
+    font-size:16px;
+}
+
+.logo-text p{
+    font-size:10px;
+    color:#ccc;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+nav a:hover{
+    color:#ff7b00;
+}
+
+/* HERO */
+.hero{
+    min-height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 8% 40px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover no-repeat;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero span{
+    color:#ff7b00;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#ddd;
+    font-size:18px;
+}
+
+/* CONTACT */
+.contact{
+    padding:70px 8%;
+    display:flex;
+    justify-content:center;
+}
+
+.contact-card{
+    width:100%;
+    max-width:750px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:35px;
+}
+
+.contact-card h3{
+    font-size:30px;
+    color:#ff7b00;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.04);
+}
+
+.info-item i{
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,123,0,0.15);
+    color:#ff7b00;
+    border-radius:12px;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.info-text span{
+    color:#ccc;
+    word-break:break-word;
+}
+
+/* FLOATING BUTTONS */
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
+}
+
+.floating a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
+}
+
+.phone{background:#ff7b00;}
+.email{background:#1e90ff;}
+.whatsapp{background:#25d366;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.hero h1{font-size:42px;}
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:10px;
+}
+
+nav{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero{
+    padding-top:160px;
+}
+
+.hero h1{font-size:34px;}
+.hero p{font-size:16px;}
+}
+
+@media(max-width:480px){
+
+nav a{
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.floating a{
+    width:48px;
+    height:48px;
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<!-- RIGHT CLICK DISABLED ONLY HERE -->
+<body oncontextmenu="return false;">
+
+<header>
+
+<div class="logo">
+<div class="logo-circle">
+<img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png">
+</div>
+<div class="logo-text">
+<h2>JADHAV ENGINEERING</h2>
+<p>Mechanical Design Solutions</p>
+</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+<div>
+<h1>Let's Build <span>Something Great</span></h1>
+<p>Get professional engineering support for your next project.</p>
+</div>
+</section>
+
+<section class="contact">
+<div class="contact-card">
+
+<h3>Contact Details</h3>
+
+<div class="info-item">
+<i class="fas fa-phone"></i>
+<div class="info-text">
+<span>+91 8976186381</span>
+</div>
+</div>
+
+<div class="info-item">
+<i class="fas fa-envelope"></i>
+<div class="info-text">
+<span>jadhavengineeringg@gmail.com</span>
+</div>
+</div>
+
+<div class="info-item">
+<i class="fas fa-map-marker-alt"></i>
+<div class="info-text">
+<span>Bhayandar, Thane, Maharashtra</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<div class="floating">
+
+<a href="tel:+918976186381" class="phone">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="mailto:jadhavengineeringg@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/918976186381" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</body>
+</html>
