@@ -105,9 +105,11 @@ nav a:hover{ color:#ff7b00; }
     text-align:center;
 }
 
+/* TITLE */
 .hero h1{
     font-size:60px;
     margin-bottom:15px;
+    line-height:1.2;
 }
 
 .hero span{
@@ -144,17 +146,14 @@ nav a:hover{ color:#ff7b00; }
     gap:15px;
 }
 
-/* ✅ ONLY CHANGE: MAKE CARD CLICKABLE */
+/* BLOG CARD */
 .blog-card{
-    display:block;
-    text-decoration:none;
     background:rgba(17,26,46,0.9);
     border:1px solid rgba(255,255,255,0.1);
     border-radius:12px;
     padding:15px;
     transition:0.3s;
     min-height:140px;
-    color:#fff;
 }
 
 .blog-card:hover{
@@ -196,6 +195,10 @@ nav a:hover{ color:#ff7b00; }
     text-decoration:none;
 }
 
+.phone{background:#ff7b00;}
+.email{background:#1e90ff;}
+.whatsapp{background:#25d366;}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
 .hero h1{font-size:48px;}
@@ -204,6 +207,7 @@ nav a:hover{ color:#ff7b00; }
 }
 
 @media(max-width:768px){
+
 header{
     flex-direction:column;
     align-items:center;
@@ -291,55 +295,51 @@ nav a{
 <input type="text" id="searchInput" placeholder="Search blogs..." onkeyup="searchBlogs()">
 </div>
 
-<div class="blog-wrapper">
+<div class="blog-wrapper" id="blogWrapper">
 
-<!-- ONLY CHANGE: ADDED LINKS -->
-
-<a href="blog1.html" class="blog-card">
+<div class="blog-card">
 <h3>Mechanical Design</h3>
 <p>AI in engineering design.</p>
-</a>
+</div>
 
-<a href="blog2.html" class="blog-card">
+<div class="blog-card">
 <h3>Precision Engineering</h3>
 <p>High accuracy systems.</p>
-</a>
+</div>
 
-<a href="blog3.html" class="blog-card">
+<div class="blog-card">
 <h3>CAD Tools</h3>
 <p>Best design software.</p>
-</a>
+</div>
 
-<a href="blog4.html" class="blog-card">
+<div class="blog-card">
 <h3>Automation</h3>
 <p>Industry 4.0 systems.</p>
-</a>
+</div>
 
-<a href="blog5.html" class="blog-card">
+<div class="blog-card">
 <h3>3D Printing</h3>
 <p>Modern manufacturing.</p>
-</a>
-
-<a href="blog6.html" class="blog-card">
-<h3>Robotics</h3>
-<p>Smart machines future.</p>
-</a>
-
-<a href="blog7.html" class="blog-card">
-<h3>Machine Design</h3>
-<p>Engineering basics.</p>
-</a>
-
-<a href="blog8.html" class="blog-card">
-<h3>Thermodynamics</h3>
-<p>Heat energy systems.</p>
-</a>
+</div>
 
 </div>
 
 </div>
 
 </section>
+
+<!-- ONLY ADDITION: SEARCH FUNCTION -->
+<script>
+function searchBlogs(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".blog-card");
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+</script>
 
 </body>
 </html>
