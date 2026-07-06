@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -60,18 +61,10 @@ header{
     flex-shrink:0;
 }
 
-.logo-circle img{
-    width:85%;
-}
+.logo-circle img{ width:85%; }
 
-.logo-text h2{
-    font-size:16px;
-}
-
-.logo-text p{
-    font-size:10px;
-    color:#ccc;
-}
+.logo-text h2{ font-size:16px; }
+.logo-text p{ font-size:10px; color:#ccc; }
 
 /* NAV */
 nav{
@@ -129,29 +122,28 @@ nav a:hover{
     flex-wrap:wrap;
 }
 
-/* CONTACT BUTTON */
-.btn{
-    display:inline-block;
-    padding:14px 35px;
-    background:#ff7b00;
-    color:#fff;
-    text-decoration:none;
-    border-radius:40px;
-    transition:0.3s;
-    font-size:16px;
-}
-
-/* BLOG BUTTON */
+/* BUTTONS (PC DEFAULT) */
+.btn,
 .btn-outline{
     display:inline-block;
     padding:14px 35px;
-    background:linear-gradient(135deg, #1e90ff, #00c6ff);
-    color:#fff;
-    text-decoration:none;
     border-radius:40px;
-    transition:0.3s;
+    text-decoration:none;
     font-size:16px;
     font-weight:600;
+    transition:0.3s;
+}
+
+/* CONTACT */
+.btn{
+    background:#ff7b00;
+    color:#fff;
+}
+
+/* BLOGS */
+.btn-outline{
+    background:linear-gradient(135deg, #1e90ff, #00c6ff);
+    color:#fff;
 }
 
 /* FLOATING */
@@ -177,7 +169,6 @@ nav a:hover{
     text-decoration:none;
 }
 
-/* COLORS */
 .phone{background:#ff7b00;}
 .email{background:#1e90ff;}
 .whatsapp{background:#25d366;}
@@ -213,6 +204,7 @@ nav{
 }
 }
 
+/* ✅ MOBILE BUTTON SIZE CHANGE (IMPORTANT PART) */
 @media(max-width:480px){
 
 nav a{
@@ -223,10 +215,12 @@ nav a{
     font-size:30px;
 }
 
-/* IMPORTANT: SAME SIZE ON MOBILE */
-.btn,.btn-outline{
-    padding:14px 35px;
-    font-size:16px;
+/* 🔥 SMALLER BUTTONS ONLY ON MOBILE */
+.btn,
+.btn-outline{
+    padding:10px 22px;   /* reduced size */
+    font-size:14px;      /* smaller text */
+    border-radius:30px;
 }
 
 .floating a{
@@ -245,7 +239,7 @@ nav a{
 
 <div class="logo">
     <div class="logo-circle">
-        <img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png" alt="Logo">
+        <img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png">
     </div>
 
     <div class="logo-text">
@@ -274,7 +268,6 @@ nav a{
     2D Drafting • 3D Modeling • Fabrication Drawings • Reverse Engineering
 </p>
 
-<!-- BUTTONS -->
 <div class="hero-buttons">
 
 <a href="tel:+918976186381" class="btn">Contact Now</a>
