@@ -73,7 +73,7 @@ header{
     color:#ccc;
 }
 
-/* NAVIGATION RIBBON */
+/* NAV */
 nav{
     display:flex;
     align-items:center;
@@ -85,14 +85,13 @@ nav a{
     color:#fff;
     text-decoration:none;
     font-size:16px;
-    transition:0.3s;
 }
 
 nav a:hover{
     color:#ff7b00;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
     min-height:100vh;
     display:flex;
@@ -140,10 +139,6 @@ nav a:hover{
     transition:0.3s;
 }
 
-.btn:hover{
-    background:#ff5e00;
-}
-
 /* BLOG BUTTON */
 .btn-outline{
     display:inline-block;
@@ -156,11 +151,7 @@ nav a:hover{
     font-weight:600;
 }
 
-.btn-outline:hover{
-    transform:translateY(-3px);
-}
-
-/* FLOATING BUTTONS */
+/* FLOATING */
 .floating{
     position:fixed;
     right:20px;
@@ -181,13 +172,9 @@ nav a:hover{
     color:#fff;
     font-size:22px;
     text-decoration:none;
-    transition:0.3s;
 }
 
-.floating a:hover{
-    transform:scale(1.1);
-}
-
+/* COLORS */
 .phone{background:#ff7b00;}
 .email{background:#1e90ff;}
 .whatsapp{background:#25d366;}
@@ -222,13 +209,17 @@ nav{
     font-size:38px;
 }
 
-/* KEEP BUTTONS SIDE BY SIDE ON TABLET */
 .hero-buttons{
     justify-content:center;
 }
+
+/* only stack buttons, NO resizing */
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
 }
 
-/* ✅ MOBILE FIX: BLOG BUTTON BELOW CONTACT */
 @media(max-width:480px){
 
 nav a{
@@ -239,19 +230,10 @@ nav a{
     font-size:30px;
 }
 
+/* KEEP SAME SIZE ALWAYS */
 .btn,.btn-outline{
-    padding:12px 25px;
+    padding:14px 35px;
     font-size:14px;
-}
-
-.hero-buttons{
-    flex-direction:column;
-    align-items:center;
-}
-
-.hero-buttons a{
-    width:80%;
-    text-align:center;
 }
 
 .floating a{
@@ -299,7 +281,6 @@ nav a{
     2D Drafting • 3D Modeling • Fabrication Drawings • Reverse Engineering
 </p>
 
-<!-- BUTTONS -->
 <div class="hero-buttons">
 
 <a href="tel:+918976186381" class="btn">Contact Now</a>
