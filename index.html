@@ -77,6 +77,7 @@ nav a{
     color:#fff;
     text-decoration:none;
     font-size:16px;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -114,7 +115,7 @@ nav a:hover{
     font-size:18px;
 }
 
-/* BUTTON ROW */
+/* BUTTONS */
 .hero-buttons{
     display:flex;
     gap:15px;
@@ -149,7 +150,6 @@ nav a:hover{
     background:linear-gradient(135deg, #1e90ff, #00c6ff);
     color:#fff;
 
-    border:none;
     box-shadow:0 4px 15px rgba(30,144,255,0.3);
 }
 
@@ -185,18 +185,21 @@ nav a:hover{
 .email{background:#1e90ff;}
 .whatsapp{background:#25d366;}
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE FIX LIKE YOUR REFERENCE ================= */
+
 @media(max-width:1024px){
 .hero h1{font-size:48px;}
 .hero p{font-size:16px;}
 }
 
+/* 🔥 MOBILE HEADER FIX (IMPORTANT) */
 @media(max-width:768px){
 
 header{
     flex-direction:column;
     align-items:center;
     gap:10px;
+    padding:10px 5%;
 }
 
 nav{
@@ -217,15 +220,35 @@ nav{
 .hero-buttons{
     justify-content:center;
 }
+
+.logo-text h2{
+    font-size:14px;
+}
+
+.logo-text p{
+    font-size:9px;
+}
 }
 
 @media(max-width:480px){
 
-.hero h1{font-size:30px;}
+nav a{
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:30px;
+}
 
 .btn,.btn-outline{
     padding:12px 25px;
     font-size:14px;
+}
+
+.floating a{
+    width:48px;
+    height:48px;
+    font-size:18px;
 }
 
 }
@@ -267,12 +290,10 @@ nav{
     2D Drafting • 3D Modeling • Fabrication Drawings • Reverse Engineering
 </p>
 
-<!-- BUTTONS -->
 <div class="hero-buttons">
 
 <a href="tel:+918976186381" class="btn">Contact Now</a>
 
-<!-- FIXED LINK -->
 <a href="blogs.html" class="btn-outline">Blogs</a>
 
 </div>
