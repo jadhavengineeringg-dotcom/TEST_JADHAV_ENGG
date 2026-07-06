@@ -70,7 +70,7 @@ nav{
     display:flex;
     align-items:center;
     gap:25px;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
 }
 
 nav a{
@@ -185,14 +185,14 @@ nav a:hover{
 .email{background:#1e90ff;}
 .whatsapp{background:#25d366;}
 
-/* ================= RESPONSIVE FIX LIKE YOUR REFERENCE ================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:1024px){
 .hero h1{font-size:48px;}
 .hero p{font-size:16px;}
 }
 
-/* 🔥 MOBILE HEADER FIX (IMPORTANT) */
+/* 🔥 MOBILE RIBBON FIX */
 @media(max-width:768px){
 
 header{
@@ -202,9 +202,19 @@ header{
     padding:10px 5%;
 }
 
+/* CLEAN CENTERED RIBBON */
 nav{
+    width:100%;
+    display:flex;
     justify-content:center;
-    gap:15px;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:5px;
+}
+
+nav a{
+    font-size:14px;
+    padding:6px 10px;
 }
 
 .hero{
@@ -232,13 +242,7 @@ nav{
 
 @media(max-width:480px){
 
-nav a{
-    font-size:14px;
-}
-
-.hero h1{
-    font-size:30px;
-}
+.hero h1{font-size:30px;}
 
 .btn,.btn-outline{
     padding:12px 25px;
