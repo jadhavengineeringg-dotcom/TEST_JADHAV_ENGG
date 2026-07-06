@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jadhav Engineering - Blogs</title>
+<title>What is Engineering Drawing? | Jadhav Engineering</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
-/* RESET */
 *{
     margin:0;
     padding:0;
@@ -25,16 +23,23 @@ html,body{
     scroll-behavior:smooth;
     background:#0b1320;
     color:#fff;
+}
 
+/* SCROLLBAR HIDE */
+body::-webkit-scrollbar{
+    width:0px;
+    display:none;
+}
+
+html{
     scrollbar-width:none;
 }
 
-::-webkit-scrollbar{
-    width:0px;
-    background:transparent;
+body{
+    -ms-overflow-style:none;
 }
 
-/* HEADER */
+/* HEADER (UNCHANGED) */
 header{
     position:fixed;
     top:0;
@@ -67,11 +72,20 @@ header{
     overflow:hidden;
 }
 
-.logo-circle img{ width:85%; }
+.logo-circle img{
+    width:85%;
+}
 
-.logo-text h2{ font-size:16px; }
-.logo-text p{ font-size:10px; color:#ccc; }
+.logo-text h2{
+    font-size:16px;
+}
 
+.logo-text p{
+    font-size:10px;
+    color:#ccc;
+}
+
+/* NAV */
 nav{
     display:flex;
     align-items:center;
@@ -83,177 +97,72 @@ nav a{
     color:#fff;
     text-decoration:none;
     font-size:16px;
-    transition:0.3s;
 }
 
-nav a:hover{ color:#ff7b00; }
-
-/* HERO */
-.hero{
-    min-height:100vh;
-    padding:150px 8% 40px;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg')
-    center/cover no-repeat;
+nav a:hover{
+    color:#ff7b00;
 }
 
-.hero-content{
+/* BLOG CONTENT (UNCHANGED) */
+.blog-container{
+    padding:140px 8% 60px;
     width:100%;
-    text-align:center;
+    text-align:left;
 }
 
-/* TITLE */
-.hero h1{
-    font-size:60px;
-    margin-bottom:15px;
-    line-height:1.2;
-}
-
-.hero span{
+.blog-container h1{
+    font-size:42px;
     color:#ff7b00;
+    margin-bottom:25px;
 }
 
-.hero p{
-    font-size:18px;
-    color:#ddd;
-    margin-bottom:30px;
+.blog-container h2{
+    font-size:24px;
+    color:#ff7b00;
+    margin-top:35px;
 }
 
-/* SEARCH */
-.search-box{
-    display:flex;
-    justify-content:center;
-    margin-bottom:30px;
-}
-
-.search-box input{
-    width:60%;
-    max-width:500px;
-    padding:12px 15px;
-    border-radius:40px;
-    border:none;
-    outline:none;
+.blog-container p{
     font-size:16px;
+    color:#ddd;
+    margin:12px 0;
+    line-height:1.7;
 }
 
-/* BLOG GRID */
-.blog-wrapper{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:15px;
+ul{
+    margin-left:25px;
+    color:#ddd;
 }
 
-/* BLOG CARD */
-.blog-card{
-    background:rgba(17,26,46,0.9);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:12px;
-    padding:15px;
-    transition:0.3s;
-    min-height:140px;
+ul li{
+    margin:6px 0;
 }
 
-.blog-card:hover{
-    transform:translateY(-5px);
-    border-color:#ff7b00;
-}
-
-.blog-card h3{
-    font-size:15px;
-    color:#ff7b00;
-}
-
-.blog-card p{
-    font-size:12px;
-    color:#ccc;
-    margin-top:8px;
-}
-
-/* FLOATING */
-.floating{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    z-index:999;
-}
-
-.floating a{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    font-size:22px;
-    text-decoration:none;
-}
-
-.phone{background:#ff7b00;}
-.email{background:#1e90ff;}
-.whatsapp{background:#25d366;}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-.hero h1{font-size:48px;}
-.blog-wrapper{grid-template-columns:repeat(3,1fr);}
-.hero{padding-top:140px;}
-}
-
+/* ✅ ONLY MOBILE NAV FIX */
 @media(max-width:768px){
 
-header{
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-}
+    nav{
+        width:100%;
+        margin-top:10px;
+        justify-content:center;
+        flex-wrap:nowrap;   /* keep in one line */
+        overflow-x:auto;    /* prevent breaking */
+        gap:12px;
+    }
 
-nav{
-    justify-content:center;
-    gap:15px;
-}
+    nav a{
+        font-size:14px;
+        white-space:nowrap;
+        flex-shrink:0;
+    }
 
-.hero{
-    padding-top:170px;
-}
+    .blog-container h1{
+        font-size:30px;
+    }
 
-.hero h1{font-size:38px;}
-
-.blog-wrapper{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.search-box input{
-    width:90%;
-}
-}
-
-@media(max-width:480px){
-.hero{
-    padding-top:180px;
-}
-
-.hero h1{font-size:30px;}
-
-.blog-wrapper{
-    grid-template-columns:1fr;
-}
-
-nav a{
-    font-size:14px;
-}
-
-.floating a{
-    width:48px;
-    height:48px;
-    font-size:18px;
-}
+    .blog-container h2{
+        font-size:20px;
+    }
 }
 
 </style>
@@ -264,82 +173,131 @@ nav a{
 <header>
 
 <div class="logo">
-<div class="logo-circle">
-<img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png">
-</div>
-<div class="logo-text">
-<h2>JADHAV ENGINEERING</h2>
-<p>Mechanical Design Solutions</p>
-</div>
+    <div class="logo-circle">
+        <img src="https://cdn.corenexis.com/f/VwD3avTiqVL.png" alt="Logo">
+    </div>
+
+    <div class="logo-text">
+        <h2>JADHAV ENGINEERING</h2>
+        <p>Mechanical Design Solutions</p>
+    </div>
 </div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 </header>
 
-<section class="hero">
+<section class="blog-container">
 
-<div class="hero-content">
+<h1>What is Engineering Drawing? A Complete Guide to Mechanical Drawing and Technical Drafting</h1>
 
-<h1>Engineering <span>Blogs</span></h1>
+<h2>Introduction</h2>
+<p>
+• Engineering drawing is the base of every engineering and manufacturing project.<br>
+• Every machine, product, or part is first designed through drawings.<br>
+• It helps engineers, designers, and manufacturers understand exact specifications.<br>
+• Modern CAD software like AutoCAD makes drawing faster and more accurate.
+</p>
 
-<p>Search and explore engineering knowledge</p>
+<h2>What is Engineering Drawing?</h2>
+<p>
+• A technical drawing representing shape, size, and specifications of components.<br>
+• Uses standard symbols, lines, and dimensions.<br>
+• Focuses on accuracy, not appearance.<br>
+• It is the universal language of engineers.
+</p>
 
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Search blogs..." onkeyup="searchBlogs()">
-</div>
+<h2>Why is Engineering Drawing Important?</h2>
+<p>
+• Provides clear communication between teams.<br>
+• Reduces manufacturing errors.<br>
+• Improves product quality.<br>
+• Helps in easy assembly and inspection.<br>
+• Reduces material waste.<br>
+• Speeds up production.
+</p>
 
-<div class="blog-wrapper" id="blogWrapper">
+<h2>Mechanical Drawing</h2>
+<p>
+• Used for machine parts and mechanical systems.<br>
+• Includes shafts, gears, bearings, frames, structures, and assemblies.<br>
+• Contains dimensions, tolerances, and material details.
+</p>
 
-<div class="blog-card">
-<h3>Mechanical Design</h3>
-<p>AI in engineering design.</p>
-</div>
+<h2>What is Technical Drafting?</h2>
+<p>
+• Creating engineering drawings using drafting rules.<br>
+• Includes orthographic, isometric, section, and assembly views.<br>
+• Follows ISO and ASME standards.
+</p>
 
-<div class="blog-card">
-<h3>Precision Engineering</h3>
-<p>High accuracy systems.</p>
-</div>
+<h2>Role of a Draftsman</h2>
+<p>
+• Converts engineering ideas into drawings.<br>
+• Works with engineers for accuracy.<br>
+• Must know CAD software and manufacturing processes.
+</p>
 
-<div class="blog-card">
-<h3>CAD Tools</h3>
-<p>Best design software.</p>
-</div>
+<h2>Traditional vs CAD Drawing</h2>
+<p>
+• Traditional: manual drawing, slow, hard to edit.<br>
+• CAD: fast, accurate, editable, and digital storage.<br>
+• Better 3D visualization and sharing.
+</p>
 
-<div class="blog-card">
-<h3>Automation</h3>
-<p>Industry 4.0 systems.</p>
-</div>
+<h2>AutoCAD Design</h2>
+<p>
+• Used for mechanical design and drafting.<br>
+• Supports fabrication and machine drawings.<br>
+• Used in product development and plant layouts.
+</p>
 
-<div class="blog-card">
-<h3>3D Printing</h3>
-<p>Modern manufacturing.</p>
-</div>
+<h2>Online CAD Services</h2>
+<p>
+• Mechanical drawing services<br>
+• Reverse engineering<br>
+• PDF to CAD conversion<br>
+• DWG file creation<br>
+• Product development
+</p>
 
-</div>
+<h2>Engineering Standards</h2>
+<p>
+• ISO<br>
+• ASME<br>
+• ANSI<br>
+• BIS<br><br>
+Defines line types, symbols, tolerances, and surface finish.
+</p>
 
-</div>
+<h2>Applications</h2>
+<p>
+• Automobile industry<br>
+• Aerospace engineering<br>
+• Heavy machinery<br>
+• Construction<br>
+• Oil & gas<br>
+• Medical equipment<br>
+• Robotics<br>
+• Consumer products
+</p>
+
+<h2>Conclusion</h2>
+<p>
+• Engineering drawing connects engineers and manufacturers.<br>
+• Ensures accuracy and reduces errors.<br>
+• Essential for every engineering project.<br>
+• Required for mechanical, CAD, and AutoCAD design work.
+</p>
 
 </section>
-
-<!-- ONLY ADDITION: SEARCH FUNCTION -->
-<script>
-function searchBlogs(){
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let cards = document.querySelectorAll(".blog-card");
-
-    cards.forEach(card => {
-        let text = card.innerText.toLowerCase();
-        card.style.display = text.includes(input) ? "block" : "none";
-    });
-}
-</script>
 
 </body>
 </html>
