@@ -85,6 +85,7 @@ nav a{
     color:#fff;
     text-decoration:none;
     font-size:16px;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -137,6 +138,7 @@ nav a:hover{
     text-decoration:none;
     border-radius:40px;
     transition:0.3s;
+    font-size:16px;
 }
 
 /* BLOG BUTTON */
@@ -148,6 +150,7 @@ nav a:hover{
     text-decoration:none;
     border-radius:40px;
     transition:0.3s;
+    font-size:16px;
     font-weight:600;
 }
 
@@ -208,16 +211,6 @@ nav{
 .hero h1{
     font-size:38px;
 }
-
-.hero-buttons{
-    justify-content:center;
-}
-
-/* only stack buttons, NO resizing */
-.hero-buttons{
-    flex-direction:column;
-    align-items:center;
-}
 }
 
 @media(max-width:480px){
@@ -230,10 +223,10 @@ nav a{
     font-size:30px;
 }
 
-/* KEEP SAME SIZE ALWAYS */
+/* IMPORTANT: SAME SIZE ON MOBILE */
 .btn,.btn-outline{
     padding:14px 35px;
-    font-size:14px;
+    font-size:16px;
 }
 
 .floating a{
@@ -281,6 +274,7 @@ nav a{
     2D Drafting • 3D Modeling • Fabrication Drawings • Reverse Engineering
 </p>
 
+<!-- BUTTONS -->
 <div class="hero-buttons">
 
 <a href="tel:+918976186381" class="btn">Contact Now</a>
